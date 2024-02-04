@@ -1,9 +1,9 @@
 [theme]
 # Primary accent color for interactive elements.
-primaryColor = "#040954"
+primaryColor = "#FF4B4B"
 
 # Background color for the main content area.
-backgroundColor = "#002b36"
+backgroundColor = "#040954"
 
 # Background color used for the sidebar and most interactive widgets.
 secondaryBackgroundColor = "#586e75"
