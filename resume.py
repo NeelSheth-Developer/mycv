@@ -11,7 +11,7 @@ st.set_page_config(page_icon="📑",
 
 
 col1,col2=st.columns([1,1])
-file_path = r"C:\Users\neelsheth\Downloads\ML\python\digital_resume\21BEC116_Neel.K.Sheth_Resume.pdf"
+file_path = "21BEC116_Neel.K.Sheth_Resume.pdf"
 file_content = open(file_path, "rb").read()
 
 
