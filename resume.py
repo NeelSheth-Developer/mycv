@@ -156,8 +156,11 @@ with st.container():
    elif contain=="Contact Me":   
      st.markdown("## Contact me 📨")
      name=st.text_input("Enter your name:")
-     #email_address=st.text_input("Enter your Email-id")
+     
+     email=st.text_input("Enter your Email-id")
      notes=st.text_area("Enter your Message:")
+     combine=name+"--"+email+"--"+notes
+
      st.session_state["button"]=st.button("Send")
      # Email configuration
      sender_email = "neeldemo2050@gmail.com"
@@ -171,7 +174,7 @@ with st.container():
      if st.session_state["button"]:
           # Send the email
           try:
-             server.sendmail(sender_email, receiver_email, notes)
+             server.sendmail(sender_email, receiver_email, combine)
              st.success("Your Message is Send Successfully")
           except:
              st.warning("OOPs there is error!")
