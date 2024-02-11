@@ -148,9 +148,9 @@ with st.container():
      st.write("""    • A Python program designed to manage and organize students’ marks,utilizing Microsoft Excel for data storage and creating excel file.
                      
                      • Technology: MS Excel, Python, Pandas""")
-     col6,co17=st.columns([1,1])
+     col6,col7=st.columns([1,1])
      col6.write("[Github Repository](https://github.com/DataMiiner/student_mark_tracker )")
-
+     col7.write("[Student-Mark-tracker](https://student-mark-tracker-by-datamiiner.streamlit.app/)")
 
 #--------------------contact me------------------------------------------     
    elif contain=="Contact Me":   
