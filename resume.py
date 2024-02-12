@@ -133,7 +133,7 @@ with st.container():
                      
                      • Technology: Python, Pandas, Plotly, Streamlit""")
      co1,co2=st.columns([1,1])
-     co1.write("[Github Repository](https://github.com/DataMiiner/stockanalysis/blob/main/stockapp.py)")
+     co1.write("[Github Repository](https://github.com/DataMiiner/stockanalysis/tree/main)")
      co2.write("[Dashboard](https://stockanalysis-1000.streamlit.app/)")
      st.write("--------------------------------------------")
      st.subheader("🏥 Hospital Management System")
@@ -141,7 +141,7 @@ with st.container():
                     
                      • Technology: Mysql, Python, Streamlit, Pandas""")
      col4,col5=st.columns([1,1])
-     col4.write("[Github Repository](https://github.com/DataMiiner/Hospital_management_system/blob/main/te.py)")
+     col4.write("[Github Repository](https://github.com/DataMiiner/Hospital_management_system/tree/main)")
      col5.write("[Hospital Management System Website](https://hospitalmanagementsystem-datamiiner.streamlit.app)")
      st.write("-----------------------------------------------------")
      st.subheader("📝 Student Marks Tracker")
