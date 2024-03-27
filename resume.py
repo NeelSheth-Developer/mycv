@@ -9,9 +9,10 @@ st.set_page_config(page_icon="📑",
                    page_title="Digital CV | Neel Sheth",
                    )
 
+linkedin_url = "https://www.linkedin.com/in/neel-sheth-91b362262/"
 
 col1,col2=st.columns([1,1])
-file_path = "Neel.K.Sheth_Resume.pdf"
+file_path = "Neel-Sheth.pdf"
 file_content = open(file_path, "rb").read()
 
 
@@ -26,6 +27,8 @@ col2.download_button(label="📄Download Resume",
                      data=file_content,
                      file_name="Sheth Neel Resume.pdf",
                      mime="application/octet-stream")
+col2.markdown(f"[🔗 LinkedIn]({linkedin_url})")
+
 #--------------------------------menu---------------------------------
 st.write("--------------------")
 with st.container():
@@ -50,7 +53,7 @@ with st.container():
       
           🗓️September 2021 – June 2025
       
-          • CGPA: 7.87
+          • CGPA: 7.89
       
       **📕CLASS XII**
       
@@ -75,26 +78,27 @@ with st.container():
       col1.write("""
       🟨 **Programming**:
 
-      • Python (Opencv, sklearn, pandas, numpy)
+      • Python (Opencv, sklearn, pandas, numpy, streamlit)
 
       • SQL (Intermediate)
 
       • Shell Scripting
 
+      • Git
+       
       • Perl
 
       🟨 **Data Visualization**:
 
-      • MS Excel, Plotly
+      • MS Excel, Plotly, Matplotlib, Seaborn
 
       • Machine Learning Modelling :
       
-      Linear Regression, Logistic Regression,
-      Decision Tree
+      Linear Regression, Logistic Regression, Decision Tree, Kmean Clustering, KNN, RandomForest
 
       🟨 **Databases**:
 
-      • MySQL""")
+      • MySQL, MongoDB""")
       col2.subheader("Soft Skills")
       labels = ['Communication', 'Adaptability', 'Analytical Skills', 'Teamwork', 'Project Management']
       fig = go.Figure(data=[go.Pie(labels=labels, hole=0.5, hoverinfo="label", textinfo="none")])
@@ -106,13 +110,17 @@ with st.container():
                         VSCode ,
                         Linux (Intermediate) , 
                         GitHub ,
-                        Jupyter Notebook ,
+                        Jupyter Lab ,
                         Google Colab""")
       st.write("---------------------------------------------")
       st.subheader("Experience")
       st.write("     **🚩 Nirma Funded - Multibot Coordinate System Project**")
       st.write("           🗓️ March 2023 - August 2023")
       st.write("            Worked with the image processing team, I contributed to the development of a cutting-edge program that leverages Python's OpenCV library. The system captures real-time data from a robotic car, employing ArUco markers for accurate localization. Using the acquired data, we implemented a graphical user interface (GUI) using Tkinter, allowing users to select specific shapes of interest. The program dynamically processes the chosen shape's attributes, creating a robust and intuitive interaction. Furthermore, the seamlessly integrated MQTT protocol facilitates the transmission of this processed real-time information to an ESP32 microcontroller, enabling efficient and low-latency control of the robotic car. This comprehensive solution demonstrates a fusion of computer vision, user interface design, and embedded systems for a versatile and responsive robotics application.""")
+      st.write(" ")
+     st.write("      **🚩 Student Placement Coordinator**")
+      st.write("           🗓️February 2024 - Present")
+      st.write("The role of a Student Placement Coordinator (SPC) entails assisting students with internship and placement-related inquiries, serving as a liaison between students and the Industry Institute Interaction (III) Cell.")
       st.write("----------------------------------------------")
       st.subheader("Achivements") 
       st.write("• Selected as a semifinalist in the Indian Automation Challenge 2023")
@@ -151,6 +159,23 @@ with st.container():
      col6,col7=st.columns([1,1])
      col6.write("[Github Repository](https://github.com/DataMiiner/student_mark_tracker )")
      col7.write("[Student-Mark-tracker](https://student-mark-tracker-by-datamiiner.streamlit.app/)")
+     st.write("--------------------------------------------")
+     st.subheader("📂 Student Internship and Placement Record System")
+     st.write("""    • Student Internship and Placement Record System (SIPRS) website specifically designed for Student Placement Coordinators (SPCs). This platform enables SPCs to perform CRUD (Create, Read, Update, Delete) operations, manage internship and placement data in a MongoDB database, and conduct comprehensive analyses. The system facilitates tracking of placement statuses (placed and unplaced) and provides insights into the number of students placed in each company.
+
+                     • Technology: Python, Pandas, Plotly, Streamlit, MongoDB """)
+     col7,col8=st.columns([1,1])
+     col7.write("[Github Repository](https://github.com/NeelSheth-Developer/Student-Internship-and-Placement-Record-System/tree/main)")
+     col8.write("[Student Internship and Placement Record System](https://spc-ece-record-web.streamlit.app/)")
+
+
+     st.write("--------------------------------------------")
+     st.subheader("🤖 Personal Voice Assistant")
+     st.write("""    • This project automates tasks via voice commands, including tab control, app management, system operations, Google searches, image generation, news reading, media playback, email sending, and note-taking, enhancing user productivity.
+     
+                     • Technology: Python, Html, CSS, Javascript""")
+
+     st.write("[Github Repository](https://github.com/NeelSheth-Developer/Personal-Voice-Assistant/tree/main)")
 
 #--------------------contact me------------------------------------------     
    elif contain=="Contact Me":   
