@@ -23,11 +23,12 @@ col2.markdown(f"📧 <a style='color: white;' href='mailto:{email_address}'>{ema
 
 phone_number = "(+91)7862861927"
 col2.markdown(f"📞 [{phone_number}](tel:{phone_number})")
+col2.markdown(f"[🔗 LinkedIn]({linkedin_url})")
 col2.download_button(label="📄Download Resume",
                      data=file_content,
                      file_name="Sheth Neel Resume.pdf",
                      mime="application/octet-stream")
-col2.markdown(f"[🔗 LinkedIn]({linkedin_url})")
+
 
 #--------------------------------menu---------------------------------
 st.write("--------------------")
@@ -130,7 +131,7 @@ with st.container():
    elif contain=="My Projects":
 # Links section
      st.markdown("## 🔗 Links")
-     st.markdown("[Github Project Repository](https://github.com/DataMiiner)")
+     st.markdown("[Github Project Repository](https://github.com/NeelSheth-Developer)")
      st.markdown("[Code Forces](https://codeforces.com/profile/coder_1_neel)")
      #st.markdown("[My Website](https://your-website-url.com)")
      st.write("--------------------------------------------------")
@@ -141,7 +142,7 @@ with st.container():
                      
                      • Technology: Python, Pandas, Plotly, Streamlit""")
      co1,co2=st.columns([1,1])
-     co1.write("[Github Repository](https://github.com/DataMiiner/stockanalysis/tree/main)")
+     co1.write("[Github Repository](https://github.com/NeelSheth-Developer/stockanalysis)")
      co2.write("[Dashboard](https://stockanalysis-1000.streamlit.app/)")
      st.write("--------------------------------------------")
      st.subheader("🏥 Hospital Management System")
@@ -149,7 +150,7 @@ with st.container():
                     
                      • Technology: Mysql, Python, Streamlit, Pandas""")
      col4,col5=st.columns([1,1])
-     col4.write("[Github Repository](https://github.com/DataMiiner/Hospital_management_system/tree/main)")
+     col4.write("[Github Repository](https://github.com/NeelSheth-Developer/Hospital_management_system)")
      col5.write("[Hospital Management System Website](https://hospitalmanagementsystem-datamiiner.streamlit.app)")
      st.write("-----------------------------------------------------")
      st.subheader("📝 Student Marks Tracker")
@@ -157,8 +158,8 @@ with st.container():
                      
                      • Technology: MS Excel, Python, Pandas""")
      col6,col7=st.columns([1,1])
-     col6.write("[Github Repository](https://github.com/DataMiiner/student_mark_tracker )")
-     col7.write("[Student-Mark-tracker](https://student-mark-tracker-by-datamiiner.streamlit.app/)")
+     col6.write("[Github Repository](https://github.com/NeelSheth-Developer/student_mark_tracker)")
+     col7.write("[Student-Mark-tracker](https://student-mark-tracker-by-datamiiner.streamlit.app)")
      st.write("--------------------------------------------")
      st.subheader("📂 Student Internship and Placement Record System")
      st.write("""    • Student Internship and Placement Record System (SIPRS) website specifically designed for Student Placement Coordinators (SPCs). This platform enables SPCs to perform CRUD (Create, Read, Update, Delete) operations, manage internship and placement data in a MongoDB database, and conduct comprehensive analyses. The system facilitates tracking of placement statuses (placed and unplaced) and provides insights into the number of students placed in each company.
