@@ -118,7 +118,7 @@ with st.container():
       st.write("           🗓️ March 2023 - August 2023")
       st.write("            Worked with the image processing team, I contributed to the development of a cutting-edge program that leverages Python's OpenCV library. The system captures real-time data from a robotic car, employing ArUco markers for accurate localization. Using the acquired data, we implemented a graphical user interface (GUI) using Tkinter, allowing users to select specific shapes of interest. The program dynamically processes the chosen shape's attributes, creating a robust and intuitive interaction. Furthermore, the seamlessly integrated MQTT protocol facilitates the transmission of this processed real-time information to an ESP32 microcontroller, enabling efficient and low-latency control of the robotic car. This comprehensive solution demonstrates a fusion of computer vision, user interface design, and embedded systems for a versatile and responsive robotics application.""")
       st.write(" ")
-     st.write("      **🚩 Student Placement Coordinator**")
+      st.write("      **🚩 Student Placement Coordinator**")
       st.write("           🗓️February 2024 - Present")
       st.write("The role of a Student Placement Coordinator (SPC) entails assisting students with internship and placement-related inquiries, serving as a liaison between students and the Industry Institute Interaction (III) Cell.")
       st.write("----------------------------------------------")
