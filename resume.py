@@ -43,7 +43,7 @@ with st.container():
    if contain=="MySelf":
       #summary
       st.subheader("Summary")
-      st.write("""Dedicated and highly motivated Electronics and Communication Engineering student with a strong foundation in programming and technical skills. Passionate about leveraging technology to solve real-world problems, particularly in the field of data science. Demonstrated proficiency in Python, NumPy, Pandas, OpenCV, plotly,  SkLearn, stramlit, SQL, and MySQL, with hands-on experience in data visualization, image processing, and microcontroller programming. Committed to delivering excellence in both individual and team-based projects. Seeking opportunities to apply my knowledge and skills to make a meaningful impact in the field of data science, where I can contribute to cutting-edge advancements and innovative solutions.""")
+      st.write("""Dedicated and highly motivated Electronics and Communication Engineering student with a strong foundation in programming and technical skills. Passionate about leveraging technology to solve real-world problems, particularly in the field of data science. Demonstrated proficiency in Python, NumPy, Pandas, OpenCV, plotly,  SkLearn, streamlit, SQL, and MySQL, with hands-on experience in data visualization, image processing, and microcontroller programming. Committed to delivering excellence in both individual and team-based projects. Seeking opportunities to apply my knowledge and skills to make a meaningful impact in the field of data science, where I can contribute to cutting-edge advancements and innovative solutions.""")
       st.write("------------------------------")
       #---------------------------education----------------------------------------
       st.subheader("Education")
