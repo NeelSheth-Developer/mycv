@@ -178,7 +178,7 @@ with st.container():
 
      st.write("[Github Repository](https://github.com/NeelSheth-Developer/Personal-Voice-Assistant/tree/main)")
      st.write("-----------------------------------------------")
-     st.subheader("📊 Sentiment Analysis of Amazon Product Reviews")
+     st.subheader("📊 Sentimental Analysis of Amazon Product Reviews")
 
      st.write("""
 • Developed a sentimental analysis project focusing on analyzing Amazon product reviews to extract insights into customer opinions and sentiments.
@@ -194,6 +194,7 @@ with st.container():
 • Deployed the sentiment analysis model using Streamlit, allowing for a user-friendly web interface to analyze new reviews in real-time.
 
 • Technologies: Scikit-Learn (Random Forest), NLP, Pandas, Plotly, Streamlit""")
+     
      col9,col10=st.columns([1,1])
 
      col9.write("[Github Repository](https://github.com/NeelSheth-Developer/Sentimental-Analysis-of-Amazon-Product-Reviews)")
