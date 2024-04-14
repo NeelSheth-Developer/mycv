@@ -181,7 +181,7 @@ with st.container():
      st.subheader("📊 Sentiment Analysis of Amazon Product Reviews")
 
      st.write("""
-• Developed a sentiment analysis project focusing on analyzing Amazon product reviews to extract insights into customer opinions and sentiments.
+• Developed a sentimental analysis project focusing on analyzing Amazon product reviews to extract insights into customer opinions and sentiments.
 • Utilized Natural Language Processing (NLP) techniques to preprocess and tokenize text data, including techniques like tokenization and stemming.
 • Implemented a machine learning model using the Random Forest algorithm from the Scikit-Learn (sklearn) library to classify reviews into positive and negative  neutral sentiment.
 • Conducted extensive data manipulation and analysis using Pandas for data preprocessing and transformation tasks.
