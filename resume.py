@@ -95,7 +95,7 @@ with st.container():
 
       • Machine Learning Modelling :
       
-      Linear Regression, Logistic Regression, Decision Tree, Kmean Clustering, KNN, RandomForest
+      Linear Regression, Logistic Regression, Decision Tree, Kmeans Clustering, KNN, RandomForest, NLP
 
       🟨 **Databases**:
 
@@ -177,7 +177,21 @@ with st.container():
                      • Technology: Python, Html, CSS, Javascript""")
 
      st.write("[Github Repository](https://github.com/NeelSheth-Developer/Personal-Voice-Assistant/tree/main)")
+     st.write("-----------------------------------------------")
+     st.subheader("📊 Sentiment Analysis of Amazon Product Reviews")
 
+     st.write("""
+• Developed a sentiment analysis project focusing on analyzing Amazon product reviews to extract insights into customer opinions and sentiments.
+• Utilized Natural Language Processing (NLP) techniques to preprocess and tokenize text data, including techniques like tokenization and stemming.
+• Implemented a machine learning model using the Random Forest algorithm from the Scikit-Learn (sklearn) library to classify reviews into positive and negative  neutral sentiment.
+• Conducted extensive data manipulation and analysis using Pandas for data preprocessing and transformation tasks.
+• Created interactive visualizations using Plotly to illustrate sentiment trends and patterns in the review data.
+• Deployed the sentiment analysis model using Streamlit, allowing for a user-friendly web interface to analyze new reviews in real-time.
+
+Technologies: Scikit-Learn (Random Forest), NLP, Pandas, Plotly, Streamlit""")
+
+     st.write("[Github Repository](https://github.com/NeelSheth-Developer/Sentimental-Analysis-of-Amazon-Product-Reviews)")
+     st.write("------------------------------------------------------")
 #--------------------contact me------------------------------------------     
    elif contain=="Contact Me":   
      st.markdown("## Contact me 📨")
