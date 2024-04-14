@@ -182,13 +182,18 @@ with st.container():
 
      st.write("""
 • Developed a sentimental analysis project focusing on analyzing Amazon product reviews to extract insights into customer opinions and sentiments.
+
 • Utilized Natural Language Processing (NLP) techniques to preprocess and tokenize text data, including techniques like tokenization and stemming.
+
 • Implemented a machine learning model using the Random Forest algorithm from the Scikit-Learn (sklearn) library to classify reviews into positive and negative  neutral sentiment.
+
 • Conducted extensive data manipulation and analysis using Pandas for data preprocessing and transformation tasks.
+
 • Created interactive visualizations using Plotly to illustrate sentiment trends and patterns in the review data.
+
 • Deployed the sentiment analysis model using Streamlit, allowing for a user-friendly web interface to analyze new reviews in real-time.
 
-Technologies: Scikit-Learn (Random Forest), NLP, Pandas, Plotly, Streamlit""")
+• Technologies: Scikit-Learn (Random Forest), NLP, Pandas, Plotly, Streamlit""")
      col9,col10=st.columns([1,1])
 
      col9.write("[Github Repository](https://github.com/NeelSheth-Developer/Sentimental-Analysis-of-Amazon-Product-Reviews)")
