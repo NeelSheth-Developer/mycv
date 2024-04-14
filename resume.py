@@ -189,8 +189,10 @@ with st.container():
 • Deployed the sentiment analysis model using Streamlit, allowing for a user-friendly web interface to analyze new reviews in real-time.
 
 Technologies: Scikit-Learn (Random Forest), NLP, Pandas, Plotly, Streamlit""")
+     col9,col10=st.columns([1,1])
 
-     st.write("[Github Repository](https://github.com/NeelSheth-Developer/Sentimental-Analysis-of-Amazon-Product-Reviews)")
+     col9.write("[Github Repository](https://github.com/NeelSheth-Developer/Sentimental-Analysis-of-Amazon-Product-Reviews)")
+     col10.write("[Sentiment Analysis of Amazon Product Reviews](https://sentimental-analysis-of-amazon-reviews.streamlit.app/)")
      st.write("------------------------------------------------------")
 #--------------------contact me------------------------------------------     
    elif contain=="Contact Me":   
