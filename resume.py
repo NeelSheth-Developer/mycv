@@ -16,7 +16,7 @@ file_path = "Neel-Sheth.pdf"
 file_content = open(file_path, "rb").read()
 
 
-col1.image("my.png",width=300)
+col1.image("my.PNG",width=300)
 col2.title("NEEL SHETH")
 email_address="shethneel2022@gmail.com"
 col2.markdown(f"📧 <a style='color: white;' href='mailto:{email_address}'>{email_address}</a>", unsafe_allow_html=True)
