@@ -194,7 +194,7 @@ with st.container():
 • Deployed the sentiment analysis model using Streamlit, allowing for a user-friendly web interface to analyze new reviews in real-time.
 
   
-    • Technologies: Scikit-Learn (Random Forest), NLP, Pandas, Plotly, Streamlit""")
+    • Technology: Scikit-Learn (Random Forest), NLP, Pandas, Plotly, Streamlit""")
      
      col9,col10=st.columns([1,1])
 
