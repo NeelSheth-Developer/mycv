@@ -54,7 +54,7 @@ with st.container():
       
           🗓️September 2021 – June 2025
       
-          • CGPA: 7.89
+          • CGPA: 7.97
       
       **📕CLASS XII**
       
@@ -76,10 +76,11 @@ with st.container():
       col1,col2=st.columns([1,1])
       col1.subheader("Technical Skills")
       col1.write(" ")
+     C, C++,Python (Opencv, sk
       col1.write("""
       🟨 **Programming**:
 
-      • Python (Opencv, sklearn, pandas, numpy, streamlit)
+      • Python (Opencv, sklearn, pandas, numpy, streamlit, FastAPI)
 
       • SQL (Intermediate)
 
@@ -88,18 +89,20 @@ with st.container():
       • Git
        
       • Perl
+      
+      • WebScraping
 
       🟨 **Data Visualization**:
 
-      • MS Excel, Plotly, Matplotlib, Seaborn
+      • MS Excel, Plotly, Matplotlib, Seaborn, PowerBI, Tableau
 
-      • Machine Learning Modelling :
+      🟨 **Machine Learning Modelling** :
       
-      Linear Regression, Logistic Regression, Decision Tree, Kmeans Clustering, KNN, RandomForest, NLP
+      • Linear Regression, Logistic Regression, Decision Tree, Kmeans Clustering, KNN, RandomForest, NLP
 
       🟨 **Databases**:
 
-      • MySQL, MongoDB""")
+      •  PostgreSQL, MySQL, MongoDB, Firebase""")
       col2.subheader("Soft Skills")
       labels = ['Communication', 'Adaptability', 'Analytical Skills', 'Teamwork', 'Project Management']
       fig = go.Figure(data=[go.Pie(labels=labels, hole=0.5, hoverinfo="label", textinfo="none")])
@@ -122,10 +125,19 @@ with st.container():
       st.write("      **🚩 Student Placement Coordinator**")
       st.write("           🗓️February 2024 - Present")
       st.write("The role of a Student Placement Coordinator (SPC) entails assisting students with internship and placement-related inquiries, serving as a liaison between students and the Industry Institute Interaction (III) Cell.")
+      st.write(" ")
+      st.write("     **🚩 Data Analyst Intern at Hyperlab**")
+      st.write("        🗓️March 2024 -Prsesent")
+      st.write("• Analyzed IMU sensor data to calculate athletic performance metrics (reflex time, fatigue levels, overshoot) with advanced processing and mathematics, improving accuracy by 30%")
+      st.write("• Developed Python algorithms for reflex, overshoot, and BLE connectivity, enhancing performance tracking by 70%. Created visualizations with Python libraries (Pandas, NumPy, Matplotlib, Plotly) and BI tools (Power BI, Tableau),and designed a Streamlit dashboard that increased stakeholder engagement by 50%")
       st.write("----------------------------------------------")
       st.subheader("Achivements") 
       st.write("• Selected as a semifinalist in the Indian Automation Challenge 2023")
       st.write("[Certificate](https://github.com/DataMiiner/certificate/blob/main/FINAL%20CERTIFICATES-14.pdf)")
+      st.write("• 2nd Runner-up in the DAS INFOMEDIA Track at the CSI Hackathon")
+      st.write("[Certificate](https://github.com/NeelSheth-Developer/HackNuthon/tree/main)")
+      
+
 #----------------------projects-----------------------------
    
    elif contain=="My Projects":
@@ -174,7 +186,7 @@ with st.container():
      st.subheader("🤖 Personal Voice Assistant")
      st.write("""    • This project automates tasks via voice commands, including tab control, app management, system operations, Google searches, image generation, news reading, media playback, email sending, and note-taking, enhancing user productivity.
      
-                     • Technology: Python, Html, CSS, Javascript""")
+                     • Technology: Python, Html, CSS, Javascript,  Gemini API, Hugging Face API""")
 
      st.write("[Github Repository](https://github.com/NeelSheth-Developer/Personal-Voice-Assistant/tree/main)")
      st.write("-----------------------------------------------")
@@ -194,7 +206,7 @@ with st.container():
 • Deployed the sentiment analysis model using Streamlit, allowing for a user-friendly web interface to analyze new reviews in real-time.
 
   
-    • Technology: Scikit-Learn (Random Forest), NLP, Pandas, Plotly, Streamlit""")
+    • Technology: Scikit-Learn (Random Forest), NLP, Pandas, Plotly, Streamlit, BeautifulSoup""")
      
      col9,col10=st.columns([1,1])
 
