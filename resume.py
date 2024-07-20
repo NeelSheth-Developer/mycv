@@ -79,7 +79,8 @@ with st.container():
       col1.write("""
       🟨 **Programming**:
 
-      • Python (Opencv, sklearn, pandas, numpy, streamlit, FastAPI)
+      • Python
+        (Opencv, sklearn, pandas, numpy, streamlit, FastAPI)
 
       • SQL (Intermediate)
 
@@ -93,11 +94,13 @@ with st.container():
 
       🟨 **Data Visualization**:
 
-      • MS Excel, Plotly, Matplotlib, Seaborn, PowerBI, Tableau
+      • MS Excel, Plotly, Matplotlib, Seaborn,
+        PowerBI, Tableau
 
       🟨 **Machine Learning Modelling** :
       
-      • Linear Regression, Logistic Regression, Decision Tree, Kmeans Clustering, KNN, RandomForest, NLP
+      • Linear Regression, Logistic Regression, Decision Tree,
+        Kmeans Clustering, KNN, RandomForest, NLP
 
       🟨 **Databases**:
 
@@ -126,7 +129,7 @@ with st.container():
       st.write("The role of a Student Placement Coordinator (SPC) entails assisting students with internship and placement-related inquiries, serving as a liaison between students and the Industry Institute Interaction (III) Cell.")
       st.write(" ")
       st.write("     **🚩 Data Analyst Intern at Hyperlab**")
-      st.write("        🗓️March 2024 -Prsesent")
+      st.write("        🗓️March 2024 -Present")
       st.write("• Analyzed IMU sensor data to calculate athletic performance metrics (reflex time, fatigue levels, overshoot) with advanced processing and mathematics, improving accuracy by 30%")
       st.write("• Developed Python algorithms for reflex, overshoot, and BLE connectivity, enhancing performance tracking by 70%. Created visualizations with Python libraries (Pandas, NumPy, Matplotlib, Plotly) and BI tools (Power BI, Tableau),and designed a Streamlit dashboard that increased stakeholder engagement by 50%")
       st.write("----------------------------------------------")
