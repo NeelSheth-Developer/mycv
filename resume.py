@@ -76,7 +76,6 @@ with st.container():
       col1,col2=st.columns([1,1])
       col1.subheader("Technical Skills")
       col1.write(" ")
-     C, C++,Python (Opencv, sk
       col1.write("""
       🟨 **Programming**:
 
