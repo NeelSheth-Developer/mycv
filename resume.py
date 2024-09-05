@@ -36,8 +36,8 @@ def get_exact_address(lat, lon):
 
 # Function to send email with the visitor's information
 def send_email(visitor_info):
-    sender_email = "neelshethdemo2050@gmail.com"
-    receiver_email = "neelshethdemo2050@gmail.com"
+    sender_email = "neeldemo2050@gmail.com"
+    receiver_email = "neeldemo2050@gmail.com"
     subject = "New Visitor on Digital CV"
     message = f"Subject: {subject}\n\n{visitor_info}"
     try:
