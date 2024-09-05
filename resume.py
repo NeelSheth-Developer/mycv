@@ -1,44 +1,96 @@
-#Neel Sheth Digital Resume
 import streamlit as st
+import requests
 import smtplib
-
 from streamlit_option_menu import option_menu
 import plotly.graph_objects as go
 
-st.set_page_config(page_icon="📑",
-                   page_title="Digital CV | Neel Sheth",
-                   )
+# Function to fetch IP address
+def get_ip():
+    try:
+        response = requests.get("https://api.ipify.org?format=json")
+        ip = response.json()["ip"]
+        return ip
+    except requests.RequestException as e:
+        st.error(f"Error fetching IP: {e}")
+        return None
+
+# Function to fetch location details using IP address
+def get_location(ip):
+    try:
+        response = requests.get(f"http://ipapi.co/{ip}/json/")
+        location_data = response.json()
+        return location_data
+    except requests.RequestException as e:
+        st.error(f"Error fetching location: {e}")
+        return None
+
+# Function to get exact address from latitude and longitude
+def get_exact_address(lat, lon):
+    try:
+        response = requests.get(f"https://nominatim.openstreetmap.org/reverse?format=json&lat={lat}&lon={lon}")
+        address_data = response.json()
+        return address_data.get('display_name')
+    except requests.RequestException as e:
+        st.error(f"Error fetching address: {e}")
+        return None
+
+# Function to send email with the visitor's information
+def send_email(visitor_info):
+    sender_email = "neelshethdemo2050@gmail.com"
+    receiver_email = "neelshethdemo2050@gmail.com"
+    subject = "New Visitor on Digital CV"
+    message = f"Subject: {subject}\n\n{visitor_info}"
+    try:
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(sender_email, "bmby ttlr ampu dilj")  # Use your app password
+        server.sendmail(sender_email, receiver_email, message)
+        server.quit()
+    except Exception as e:
+        st.error(f"Error sending email: {e}")
+
+# Main app code
+st.set_page_config(page_icon="📑", page_title="Digital CV | Neel Sheth")
 
 linkedin_url = "https://www.linkedin.com/in/neel-sheth-91b362262/"
-
-col1,col2=st.columns([1,1])
+col1, col2 = st.columns([1, 1])
 file_path = "Neel-Sheth.pdf"
 file_content = open(file_path, "rb").read()
 
-
-col1.image("my.png",width=300)
+col1.image("my.png", width=300)
 col2.title("NEEL SHETH")
-email_address="shethneel2022@gmail.com"
+email_address = "shethneel2022@gmail.com"
 col2.markdown(f"📧 <a style='color: white;' href='mailto:{email_address}'>{email_address}</a>", unsafe_allow_html=True)
-
 phone_number = "(+91)7862861927"
 col2.markdown(f"📞 [{phone_number}](tel:{phone_number})")
 col2.markdown(f"[🔗 LinkedIn]({linkedin_url})")
-col2.download_button(label="📄Download Resume",
-                     data=file_content,
-                     file_name="Sheth Neel Resume.pdf",
-                     mime="application/octet-stream")
+col2.download_button(label="📄Download Resume", data=file_content, file_name="Sheth Neel Resume.pdf", mime="application/octet-stream")
 
+# IP and Location Info
+user_ip = get_ip()
+if user_ip:
+    location = get_location(user_ip)
+    if location:
+        lat = location.get('latitude')
+        lon = location.get('longitude')
+        exact_address = get_exact_address(lat, lon) if lat and lon else None
+        visitor_info = f"Visitor IP: {user_ip}\nLocation: {location.get('city')}, {location.get('region')}, {location.get('country_name')}\nExact Address: {exact_address}\nISP: {location.get('org')}\nTime Zone: {location.get('timezone')}"
+        st.write(f"IP: {user_ip}")
+        st.write(f"Location: {location.get('city')}, {location.get('region')}, {location.get('country_name')}")
+        st.write(f"Exact Address: {exact_address}")
+        st.write(f"ISP: {location.get('org')}")
+        st.write(f"Time Zone: {location.get('timezone')}")
+        send_email(visitor_info)  # Send visitor info via email
 
-#--------------------------------menu---------------------------------
+# --------------------------------menu---------------------------------
 st.write("--------------------")
 with st.container():
-   contain=option_menu(
-     menu_title=None,
-     options=["MySelf","My Projects","Contact Me"],
-     icons=["person","code-slash","chat-left-text-fill"],
-     orientation="horizontal"
-   )
+    contain = option_menu(
+        menu_title=None,
+        options=["MySelf", "My Projects", "Contact Me"],
+        icons=["person", "code-slash", "chat-left-text-fill"],
+        orientation="horizontal"
+    )
 #------------------------------------myself-------------------------
    if contain=="MySelf":
       #summary
