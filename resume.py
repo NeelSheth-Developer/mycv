@@ -1,52 +1,20 @@
+#Neel Sheth Digital Resume
 import streamlit as st
 import smtplib
+
 from streamlit_option_menu import option_menu
 import plotly.graph_objects as go
-import requests
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 
 st.set_page_config(page_icon="📑",
                    page_title="Digital CV | Neel Sheth",
                    )
-
-# Function to get visitor's IP and location
-def get_visitor_info():
-    ip = requests.get('https://api.ipify.org').text
-    location_data = requests.get(f'https://ipapi.co/{ip}/json/').json()
-    city = location_data.get('city', 'Unknown')
-    country = location_data.get('country_name', 'Unknown')
-    return ip, f"{city}, {country}"
-
-# Function to send email notification
-def send_visitor_notification(ip, location):
-    sender_email = "neeldemo2050@gmail.com"
-    receiver_email = "shethneel2022@gmail.com"
-    password = "bmby ttlr ampu dilj"  # Replace with your actual app password
-
-    subject = "New Website Visitor"
-    body = f"Someone visited your website!\n\nIP Address: {ip}\nLocation: {location}"
-
-    message = MIMEMultipart()
-    message['From'] = sender_email
-    message['To'] = receiver_email
-    message['Subject'] = subject
-    message.attach(MIMEText(body, 'plain'))
-
-    with smtplib.SMTP('smtp.gmail.com', 587) as server:
-        server.starttls()
-        server.login(sender_email, password)
-        server.send_message(message)
-
-# Get visitor info and send notification
-ip, location = get_visitor_info()
-send_visitor_notification(ip, location)
 
 linkedin_url = "https://www.linkedin.com/in/neel-sheth-91b362262/"
 
 col1,col2=st.columns([1,1])
 file_path = "Neel-Sheth.pdf"
 file_content = open(file_path, "rb").read()
+
 
 col1.image("my.png",width=300)
 col2.title("NEEL SHETH")
@@ -60,6 +28,7 @@ col2.download_button(label="📄Download Resume",
                      data=file_content,
                      file_name="Sheth Neel Resume.pdf",
                      mime="application/octet-stream")
+
 
 #--------------------------------menu---------------------------------
 st.write("--------------------")
@@ -199,7 +168,7 @@ with st.container():
      col5.write("[Hospital Management System Website](https://hospitalmanagementsystem-datamiiner.streamlit.app)")
      st.write("-----------------------------------------------------")
      st.subheader("📝 Student Marks Tracker")
-     st.write("""    • A Python program designed to manage and organize students' marks,utilizing Microsoft Excel for data storage and creating excel file.
+     st.write("""    • A Python program designed to manage and organize students’ marks,utilizing Microsoft Excel for data storage and creating excel file.
                      
                      • Technology: MS Excel, Python, Pandas""")
      col6,col7=st.columns([1,1])
@@ -253,25 +222,24 @@ with st.container():
      
      email=st.text_input("Enter your Email-id")
      notes=st.text_area("Enter your Message:")
-     combine=f"Name: {name}\nEmail: {email}\nMessage: {notes}"
+     combine=name+"--"+email+"--"+notes
 
-     if st.button("Send"):
-         sender_email = "neeldemo2050@gmail.com"
-         receiver_email = "shethneel2022@gmail.com"
-         password = "bmby ttlr ampu dilj"  # Replace with your actual app password
+     st.session_state["button"]=st.button("Send")
+     # Email configuration
+     sender_email = "neeldemo2050@gmail.com"
+     receiver_email = "shethneel2022@gmail.com"
+     subject = f"Notification from {name}"
+     server=smtplib.SMTP('smtp.gmail.com',587)
+     server.starttls()
 
-         subject = f"Message from {name}"
-         message = MIMEMultipart()
-         message['From'] = sender_email
-         message['To'] = receiver_email
-         message['Subject'] = subject
-         message.attach(MIMEText(combine, 'plain'))
-
-         try:
-             with smtplib.SMTP('smtp.gmail.com', 587) as server:
-                 server.starttls()
-                 server.login(sender_email, password)
-                 server.send_message(message)
-             st.success("Your Message is Sent Successfully")
-         except Exception as e:
-             st.warning(f"Oops, there was an error: {str(e)}")
+      # Login to your Gmail account
+     server.login(sender_email,"bmby ttlr ampu dilj") 
+     if st.session_state["button"]:
+          # Send the email
+          try:
+             server.sendmail(sender_email, receiver_email, combine)
+             st.success("Your Message is Send Successfully")
+          except:
+             st.warning("OOPs there is error!")
+          # Close the SMTP connection
+          server.quit()
