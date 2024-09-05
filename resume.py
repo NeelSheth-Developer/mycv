@@ -1,72 +1,24 @@
+#Neel Sheth Digital Resume
 import streamlit as st
 import smtplib
+
 from streamlit_option_menu import option_menu
 import plotly.graph_objects as go
-import requests
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 
-st.set_page_config(page_icon="📑", page_title="Digital CV | Neel Sheth")
+st.set_page_config(page_icon="📑",
+                   page_title="Digital CV | Neel Sheth",
+                   )
 
-# Function to get IP address
-def get_ip():
-    try:
-        response = requests.get("https://api.ipify.org?format=json")
-        return response.json()["ip"]
-    except requests.RequestException:
-        return None
-
-# Function to get location data
-def get_location(ip):
-    try:
-        response = requests.get(f"http://ipapi.co/{ip}/json/")
-        return response.json()
-    except requests.RequestException:
-        return None
-
-# Function to send email
-def send_email(subject, body):
-    sender_email = "neeldemo2050@gmail.com"
-    receiver_email = "neeldemo2050@gmail.com"
-    password = "bmby ttlr ampu dilj"  # Replace with your actual app password
-
-    message = MIMEMultipart()
-    message["From"] = sender_email
-    message["To"] = receiver_email
-    message["Subject"] = subject
-
-    message.attach(MIMEText(body, "plain"))
-
-    with smtplib.SMTP("smtp.gmail.com", 587) as server:
-        server.starttls()
-        server.login(sender_email, password)
-        server.send_message(message)
-
-# Get user IP and location
-user_ip = get_ip()
-location = get_location(user_ip) if user_ip else None
-
-# Send email with user details
-if user_ip and location:
-    subject = "New Website Visitor"
-    body = f"""
-    New visitor to your digital resume website:
-    IP Address: {user_ip}
-    Location: {location.get('city', 'Unknown')}, {location.get('region', 'Unknown')}, {location.get('country_name', 'Unknown')}
-    ISP: {location.get('org', 'Unknown')}
-    """
-    send_email(subject, body)
-
-# Rest of your existing code
 linkedin_url = "https://www.linkedin.com/in/neel-sheth-91b362262/"
 
-col1, col2 = st.columns([1,1])
+col1,col2=st.columns([1,1])
 file_path = "Neel-Sheth.pdf"
 file_content = open(file_path, "rb").read()
 
-col1.image("my.png", width=300)
+
+col1.image("my.png",width=300)
 col2.title("NEEL SHETH")
-email_address = "shethneel2022@gmail.com"
+email_address="shethneel2022@gmail.com"
 col2.markdown(f"📧 <a style='color: white;' href='mailto:{email_address}'>{email_address}</a>", unsafe_allow_html=True)
 
 phone_number = "(+91)7862861927"
