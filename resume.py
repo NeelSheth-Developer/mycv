@@ -27,7 +27,7 @@ def get_location(ip):
 # Function to send email
 def send_email(subject, body):
     sender_email = "neeldemo2050@gmail.com"
-    receiver_email = "neeldemo@gmail.com"
+    receiver_email = "neeldemo2050@gmail.com"
     password = "bmby ttlr ampu dilj"  # Replace with your actual app password
 
     message = MIMEMultipart()
