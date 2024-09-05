@@ -82,15 +82,17 @@ if user_ip:
         st.write(f"Time Zone: {location.get('timezone')}")
         send_email(visitor_info)  # Send visitor info via email
 
-# --------------------------------menu---------------------------------
+#--------------------------------menu---------------------------------
 st.write("--------------------")
 with st.container():
-    contain = option_menu(
-        menu_title=None,
-        options=["MySelf", "My Projects", "Contact Me"],
-        icons=["person", "code-slash", "chat-left-text-fill"],
-        orientation="horizontal"
-    )
+   contain=option_menu(
+     menu_title=None,
+     options=["MySelf","My Projects","Contact Me"],
+     icons=["person","code-slash","chat-left-text-fill"],
+     orientation="horizontal"
+   )
+
+   
 #------------------------------------myself-------------------------
    if contain=="MySelf":
       #summary
